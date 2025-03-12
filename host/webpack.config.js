@@ -44,6 +44,9 @@ module.exports = (_, argv) => ({
       name: "host",
       filename: "remoteEntry.js",
       remotes: {
+        // 'layout' key is the name of the remote module. Used in import statement
+        // eg. import{ Header } from "layout/Header";
+        // layout@ is the 'name' property mentioned in the webpac config of the layout project.
         layout: "layout@http://localhost:3001/remoteEntry.js",
         pages: "pages@http://localhost:3002/remoteEntry.js",
       },
